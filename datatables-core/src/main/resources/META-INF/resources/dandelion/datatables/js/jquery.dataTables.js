@@ -13536,7 +13536,7 @@
 		 *  @type string|function
 		 *  @default alert
 		 */
-		errMode: "alert",
+		errMode: "none",
 	
 	
 		/**
