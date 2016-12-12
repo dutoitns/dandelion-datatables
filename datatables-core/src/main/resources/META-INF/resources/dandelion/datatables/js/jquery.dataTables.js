@@ -10426,10 +10426,13 @@
 		 *    } );
 		 */
 		"fnFormatNumber": function ( toFormat ) {
-			return toFormat.toString().replace(
-				/\B(?=(\d{3})+(?!\d))/g,
-				this.oLanguage.sThousands
-			);
+			if (toFormat.toString().length > 4) {
+				return toFormat.toString().replace(
+					/\B(?=(\d{3})+(?!\d))/g,
+					this.oLanguage.sThousands
+				);
+			}
+			return toFormat;
 		},
 	
 	
@@ -11272,7 +11275,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sThousands": ",",
+			"sThousands": " ",
 	
 	
 			/**
