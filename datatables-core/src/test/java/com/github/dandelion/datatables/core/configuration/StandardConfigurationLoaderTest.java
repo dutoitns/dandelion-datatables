@@ -99,7 +99,7 @@ public class StandardConfigurationLoaderTest {
 		assertThat(map.containsKey("global")).isTrue();
 		
 		// Default values
-		assertThat(map.get("global").get(DatatableOptions.FEATURE_INFO)).isEqualTo("false");
+		assertThat(map.get("global").get(DatatableOptions.FEATURE_INFO)).isEqualTo("true");
 		
 		// Overriden values
 		assertThat(map.get("global").get(DatatableOptions.MAIN_EXTENSION_NAMES)).isEqualTo("ext1,ext2");
